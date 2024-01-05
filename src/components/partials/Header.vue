@@ -1,5 +1,5 @@
 <template>
-    <div class=" w-full py-4 px-4 lg:px-2 xl:px-0 h-[120px] flex border-[#F2F3F6] dark:border-gray-500 lg:border-b-0" :class="{'border-b-2':show}">
+    <header class=" w-full py-4 px-4 lg:px-2 xl:px-0 h-[120px] flex border-[#F2F3F6] dark:border-gray-500 lg:border-b-0" :class="{'border-b-2':show}">
         <div class=" w-full max-w-[1269px] mx-auto flex m-auto items-center justify-between">
             <a href="/">
                 <img src="/images/logo_black.png" class="  dark:hidden  " alt="">
@@ -13,7 +13,7 @@
                 <a href="" class=" text-primary dark:text-white  font-helvetica font-bold text-base hidden lg:block">FAQ</a>
                 <a href="" class=" text-primary dark:text-white  font-helvetica font-bold text-base hidden lg:block">Contact</a>
                 <div class=" hidden sm:block">
-                    <button class=" flex items-center space-x-3 bg-primary dark:bg-white rounded-[2rem] border-2 border-[#242726] text-white dark:text-primary text-base font-bold h-[3rem] px-4 hover:scale-110 duration-200 font-helvetica ">
+                    <button @click="toggleDarkMode" class=" flex items-center space-x-3 bg-primary dark:bg-white rounded-[2rem] border-2 border-[#242726] text-white dark:text-primary text-base font-bold h-[3rem] px-4 hover:scale-110 duration-200 font-helvetica ">
                         <span>Aller vers l’app web</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class=" dark:hidden" >
                             <path d="M7 17L17 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -42,7 +42,7 @@
                 </button>
             </div>
         </div>
-    </div>
+    </header>
 
      <aside id="default-sidebar" :class="{'translate-x-0  sideBar':show,'translate-x-full ':!show}" class="  fixed py-4  bg-white dark:bg-primary  lg:hidden top-[7.5rem] h-[89.8%] right-0 z-40 w-full sm:max-w-[75%]  transition-transform  " aria-label="Sidebar">
             <div class="h-full  overflow-y-auto flex flex-col items-center justify-between pb-16 sm:pb-10  ">
@@ -96,6 +96,9 @@
 
 <script setup>
     import { onMounted, ref } from "vue";
+    import { useDark,useToggle } from "@vueuse/core";
+    const isDark = useDark();
+    const toggleDark = useToggle(isDark);
     const show = ref(false)
 
     const toggleMenu = () => {
@@ -103,8 +106,18 @@
          document.body.classList.toggle('overflow-hidden');
     }
 
+    const toggleDarkMode = () => {
+        toggleDark();
+        document.body.classList.toggle('dark');
+    }
+
     onMounted(() => {
-            //  document.body.classList.add('dark');
+        if(isDark.value){
+             document.body.classList.add('dark');
+        }else{
+             document.body.classList.remove('dark');
+        }
+            
     })
 </script>
 
