@@ -25,7 +25,7 @@
                         </svg>
                     </button>
                 </div>
-                <button class=" flex items-center space-x-2 lg:hidden" @click="show = !show">
+                <button class=" flex items-center space-x-2 lg:hidden" @click="toggleMenu">
                     <span class=" text-primary dark:text-white text-[0.86044rem] font-bold font-helvetica">
                         Menu
                     </span>
@@ -97,8 +97,14 @@
 <script setup>
     import { onMounted, ref } from "vue";
     const show = ref(false)
+
+    const toggleMenu = () => {
+         show.value = !show.value
+         document.body.classList.toggle('overflow-hidden');
+    }
+
     onMounted(() => {
-             document.body.classList.add('dark');
+            //  document.body.classList.add('dark');
     })
 </script>
 

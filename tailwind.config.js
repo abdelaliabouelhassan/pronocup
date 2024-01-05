@@ -12,7 +12,10 @@ export default {
       },
       fontFamily:{
         helvetica:'Helvetica Now Display'
-      }
+      },
+      screens: {
+        'h-xl': '1444px',
+      },
     },
   },
   plugins: [],

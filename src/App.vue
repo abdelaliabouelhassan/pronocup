@@ -1,6 +1,6 @@
 <template>
   <DefaultLayout>
-    dsf
+    <HeroSection />
   </DefaultLayout>
 </template>
 
