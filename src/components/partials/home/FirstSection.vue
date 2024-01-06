@@ -1,7 +1,6 @@
 <template>
     <section class=" w-full flex flex-col items-center space-y-10 max-w-[1235px] py-10 px-4 xl:px-0 mx-auto">
         <h1 class=" text-primary dark:text-white font-helvetica text-[2rem] text-center md:text-[4rem] font-medium">Le concept de Pronocup</h1>
-
         <div class=" w-full grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             <div class=" bg-[#F9FAFB] dark:bg-[#1E2120] rounded-[2rem] w-full px-[1.25rem] sm:px-[2.8125rem] pt-[2.5rem] sm:pt-[2.8125rem] flex flex-col items-start justify-between space-y-8">
                <div class=" w-full  flex flex-col items-start space-y-8">
@@ -155,12 +154,17 @@
                 </div>
             </div>
         </div>
+
+        <div class=" w-full pt-20">
+            <StepCard />
+        </div>
     </section>
 </template>
 
 
 
 <script setup>
+    import StepCard from '@/components/UI/StepCard.vue'
     import { useDark } from "@vueuse/core";
     const isDark = useDark();
 </script>
