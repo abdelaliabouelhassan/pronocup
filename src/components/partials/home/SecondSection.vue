@@ -103,7 +103,9 @@
         if(ItemIndex.value > 0){
             ItemIndex.value--
             scrollToCard('controle')
-            scrollToCard('card-' + ItemIndex.value)
+             setTimeout(() => {
+                scrollToCard('card-' + ItemIndex.value)
+            },25)
             
         }
     }
@@ -112,7 +114,9 @@
         if(ItemIndex.value < ItemLength.value - 1){
             ItemIndex.value++
              scrollToCard('controle')
-            scrollToCard('card-' + ItemIndex.value)
+            setTimeout(() => {
+                scrollToCard('card-' + ItemIndex.value)
+            },25)
            
         }
     }
