@@ -1,6 +1,6 @@
 <template>
     <section class=" w-full max-w-[1280px] mx-auto py-28 px-4 xl:px-0 space-y-40">
-        <div class=" w-full pt-16 md:pt-28 bg-[#F2F4F7] px-4 rounded-[2rem] dark:bg-[#242726] flex flex-col items-center space-y-4">
+        <div v-animate  class=" w-full pt-16 md:pt-28 bg-[#F2F4F7] px-4 rounded-[2rem] dark:bg-[#242726] flex flex-col items-center space-y-4">
             <div class=" flex flex-col items-center space-y-4">
                 <h1 class=" text-primary dark:text-white text-center leading-[116.865%] text-[1.75rem] md:text-[4rem] font-helvetica font-medium">Découvrez notre app mobile</h1>
                 <span class=" text-[#98A2B3] font-helvetica text-xl md:text-2xl font-normal text-center">
@@ -26,7 +26,7 @@
             </div>
         </div>
 
-        <div class=" w-full" id="contact" >
+        <div v-animate  class=" w-full" id="contact" >
             <ContactUs  />
         </div>
     </section>

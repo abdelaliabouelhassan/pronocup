@@ -7,13 +7,13 @@
 
         
 
-           <div class=" w-full   overflow-x-auto flex items-start space-x-10 xl:space-x-0 hidden   xl:grid xl:grid-cols-4 xl:gap-10">
+           <div v-animate class=" w-full   overflow-x-auto flex items-start space-x-10 xl:space-x-0 hidden   xl:grid xl:grid-cols-4 xl:gap-10">
                 <div v-for="(item,index,key) in Items" :key="key" :id="'card-' + index" @click="SelectLogo(index)" class="flex-shrink-0 w-[18.625rem]   xl:w-full h-[8.875rem] flex rounded-3xl cursor-pointer duration-200 dark:hover:bg-[#2A3A35] hover:bg-[#ECF7F2]" :class="{'dark:bg-[#2A3A35] bg-[#ECF7F2]':ItemIndex == index,'bg-[#F2F4F7] dark:bg-[#242726]':ItemIndex != index}">
                     <img :src="item.logo" class=" m-auto object-cover" alt="">
                 </div>
             </div>
 
-            <div class=" w-full xl:hidden">
+            <div v-animate  class=" w-full xl:hidden">
                 <Splide ref="splideRef" :options="options">
                     <SplideSlide  v-for="(item,index,key) in Items" :key="key" class="w-[18.625rem] ">
                     <div :id="'card-' + index" @click="SelectLogo(index)" class=" w-full h-[8.875rem] flex rounded-3xl cursor-pointer duration-200 dark:hover:bg-[#2A3A35] hover:bg-[#ECF7F2]" :class="{'dark:bg-[#2A3A35] bg-[#ECF7F2]':ItemIndex == index,'bg-[#F2F4F7] dark:bg-[#242726]':ItemIndex != index}">
@@ -23,7 +23,7 @@
                 </Splide>
             </div>
 
-            <div id="bigcard" class=" w-full bg-[#F2F4F7] dark:bg-[#242726] rounded-[2rem] px-[3rem]  py-[3rem] lg:py-[5rem] lg:px-[7rem]">
+            <div v-animate  id="bigcard" class=" w-full bg-[#F2F4F7] dark:bg-[#242726] rounded-[2rem] px-[3rem]  py-[3rem] lg:py-[5rem] lg:px-[7rem]">
                 <div class=" w-full flex md:flex-row flex-col items-start md:items-center justify-between space-y-5 md:space-y-0 md:space-x-10">
                     <div class=" max-w-[17.3125rem] w-full max-h-[4.23675rem]">
                         <img class=" w-full h-full object-cover" :src="Items[ItemIndex].logo" alt="">
