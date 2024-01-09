@@ -13,4 +13,9 @@ app.directive('animateleft', animateleft);
 app.directive('animateright', animateright);
 app.directive('accordion', accordion);
 
+import '@splidejs/vue-splide/css';
+import '@splidejs/vue-splide/css/skyblue';
+import '@splidejs/vue-splide/css/sea-green';
+import '@splidejs/vue-splide/css/core';
+
 app.mount('#app');

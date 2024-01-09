@@ -60,10 +60,7 @@
 <script setup>
     import { onMounted, ref } from "vue";
     import { Splide, SplideSlide } from '@splidejs/vue-splide';
-    import '@splidejs/vue-splide/css';
-    import '@splidejs/vue-splide/css/skyblue';
-    import '@splidejs/vue-splide/css/sea-green';
-    import '@splidejs/vue-splide/css/core';
+  
     
     const splideRef = ref(null)
     const  options = {

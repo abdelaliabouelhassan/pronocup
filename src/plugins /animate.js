@@ -21,6 +21,12 @@ const animate = {
 
     observer.observe(el);
 
+    // Cleanup the observer when the component is unmounted
+    const cleanupObserver = () => {
+      observer.disconnect();
+    };
+
+    //beforeUnmount(cleanupObserver);
   },
 };
 
