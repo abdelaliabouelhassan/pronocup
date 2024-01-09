@@ -1,6 +1,6 @@
 <template>
-    <section id="clients" class=" w-full flex flex-col px-4 xl:px-0 items-center max-w-[1280px] mx-auto space-y-6 py-28">
-            <div class=" flex flex-col items-center space-y-4">
+    <section id="clients" class=" w-full flex flex-col  items-center max-w-[1280px] mx-auto space-y-6 py-28">
+            <div class=" flex flex-col items-center space-y-4 px-4 xl:px-0">
                     <h1 class=" text-primary dark:text-white text-[2.375rem] text-center md:text-[4rem] font-helvetica font-medium">XXX+ clients satisfaits</h1>
                     <span class=" text-2xl font-normal font-helvetica text-[#98A2B3] dark:text-[#9E9E9E]">Pourquoi pas vous ?</span>
             </div>
@@ -14,8 +14,8 @@
             </div>
 
             <div v-animate  class=" w-full xl:hidden">
-                <Splide ref="splideRef" :options="options">
-                    <SplideSlide  v-for="(item,index,key) in Items" :key="key" class="w-[18.625rem] ">
+                <Splide  @splide:moved="getIndex" ref="splideRef" :options="options">
+                    <SplideSlide  v-for="(item,index,key) in Items" :key="key" class="w-[18.625rem] px-4">
                     <div :id="'card-' + index" @click="SelectLogo(index)" class=" w-full h-[8.875rem] flex rounded-3xl cursor-pointer duration-200 dark:hover:bg-[#2A3A35] hover:bg-[#ECF7F2]" :class="{'dark:bg-[#2A3A35] bg-[#ECF7F2]':ItemIndex == index,'bg-[#F2F4F7] dark:bg-[#242726]':ItemIndex != index}">
                                     <img :src="item.logo" class=" m-auto object-cover" alt="">
                     </div>
@@ -23,7 +23,8 @@
                 </Splide>
             </div>
 
-            <div v-animate  id="bigcard" class=" w-full bg-[#F2F4F7] dark:bg-[#242726] rounded-[2rem] px-[3rem]  py-[3rem] lg:py-[5rem] lg:px-[7rem]">
+          <div class=" w-full px-4 xl:px-0">
+              <div v-animate  id="bigcard" class=" w-full bg-[#F2F4F7] dark:bg-[#242726] rounded-[2rem] px-[3rem]  py-[3rem] lg:py-[5rem] lg:px-[7rem]">
                 <div class=" w-full flex md:flex-row flex-col items-start md:items-center justify-between space-y-5 md:space-y-0 md:space-x-10">
                     <div class=" max-w-[17.3125rem] w-full max-h-[4.23675rem]">
                         <img class=" w-full h-full object-cover" :src="Items[ItemIndex].logo" alt="">
@@ -36,8 +37,9 @@
                     </div>
                 </div>
             </div>
+          </div>
 
-            <div id="controle" class=" w-full flex justify-end" v-if="ItemLength > 1">
+            <div id="controle" class=" w-full flex justify-end px-4 xl:px-0" v-if="ItemLength > 1">
             <div class=" flex items-center space-x-4">
                 <button @click="Prev" :class="{'border-2 dark:text-white':ItemIndex == 0,'bg-[#28D9BB]': ItemIndex > 0}" class=" duration-200 border-[#F2F4F7] dark:border-[#292D32]  rounded-full w-[53px] h-[53px] flex">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6  m-auto">
@@ -69,10 +71,10 @@
                 arrows:false,
                 autoWidth:true,
                 pagination:false,
-                gap:40
+                gap:2
               
             }
-
+    
     const Items = ref([
         {
             logo:'/images/home/pinterest.svg',
@@ -121,26 +123,19 @@
 
     const SelectLogo = (index) => {
         ItemIndex.value = index;
+         splideRef.value.go(index);
+    }
+
+    const getIndex = (e) => {
+        ItemIndex.value = e.index
     }
 
       const Prev = () => {
-      
        splideRef.value.go('-1')
-        if(ItemIndex.value > 0){
-            ItemIndex.value--
-        }else(
-            ItemIndex.value = ItemLength.value - 1
-        )
     }
 
     const Next = () => {
         splideRef.value.go('+1')
-        if(ItemIndex.value < ItemLength.value - 1){
-            ItemIndex.value++
-                  
-        }else{
-            ItemIndex.value = 0
-        }
     }
 
     const scrollToCard = (id) => {
