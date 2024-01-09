@@ -2,7 +2,7 @@
     <section id="concept" class=" w-full flex flex-col items-center space-y-10 max-w-[1235px] py-10 px-4 xl:px-0 mx-auto">
         <h1 class=" text-primary dark:text-white font-helvetica text-[2rem] text-center md:text-[4rem] font-medium">Le concept de Pronocup</h1>
         <div  class=" w-full grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-            <div v-animate  class=" bg-[#F9FAFB] dark:bg-[#1E2120] rounded-[2rem] w-full px-[1.25rem] sm:px-[2.8125rem] pt-[2.5rem] sm:pt-[2.8125rem] flex flex-col items-start justify-between space-y-8">
+            <div v-animateright  class=" bg-[#F9FAFB] dark:bg-[#1E2120] rounded-[2rem] w-full px-[1.25rem] sm:px-[2.8125rem] pt-[2.5rem] sm:pt-[2.8125rem] flex flex-col items-start justify-between space-y-8">
                <div class=" w-full  flex flex-col items-start space-y-8">
                  <div class=" bg-[#28D9BB] w-[4.5rem] h-[4.5rem] rounded-full flex">
                     <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none" class=" m-auto">
@@ -21,7 +21,7 @@
                     <img src="/images/home/final.png" class=" object-cover w-full" alt="">
                 </div>
             </div>
-            <div v-animate  class=" bg-[#F9FAFB] dark:bg-[#1E2120] rounded-[2rem] w-full px-[1.25rem] sm:px-[2.8125rem] pt-[2.5rem] sm:pt-[2.8125rem] flex flex-col items-start justify-between space-y-8">
+            <div v-animateleft  class=" bg-[#F9FAFB] dark:bg-[#1E2120] rounded-[2rem] w-full px-[1.25rem] sm:px-[2.8125rem] pt-[2.5rem] sm:pt-[2.8125rem] flex flex-col items-start justify-between space-y-8">
                <div class=" w-full  flex flex-col items-start space-y-8">
                  <div class=" bg-[#28D9BB] w-[4.5rem] h-[4.5rem] rounded-full flex">
                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none" class=" m-auto">
@@ -39,7 +39,7 @@
                      <img src="/images/home/classementlight.png" class=" object-cover hidden dark:block w-full" alt="">
                 </div>
             </div>
-            <div v-animate  class=" md:col-span-2  bg-[#F9FAFB] dark:bg-[#1E2120] rounded-[2rem] w-full   flex  lg:items-center items-end lg:flex-row flex-col justify-between space-y-8">
+            <div v-animateleft  class=" md:col-span-2  bg-[#F9FAFB] dark:bg-[#1E2120] rounded-[2rem] w-full   flex  lg:items-center items-end lg:flex-row flex-col justify-between space-y-8">
                <div class=" w-full  flex flex-col items-start space-y-8 lg:max-w-[33.5rem] sm:py-[2.8125rem] py-[2.5rem]  pl-[1.25rem] pr-[1.25rem] lg:pr-0  sm:pl-[2.8125rem] ">
                  <div class=" bg-[#28D9BB] w-[4.5rem] h-[4.5rem] rounded-full flex">
                     <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none" class=" m-auto">
@@ -61,7 +61,7 @@
                     <img src="/images/home/work.png" class=" object-cover w-full" alt="">
                 </div>
             </div>
-            <div v-animate  class=" bg-[#F9FAFB] dark:bg-[#1E2120] rounded-[2rem] w-full px-[1.25rem] sm:px-[2.8125rem] pt-[2.5rem] sm:pt-[2.8125rem] flex flex-col items-start justify-between space-y-8">
+            <div v-animateright  class=" bg-[#F9FAFB] dark:bg-[#1E2120] rounded-[2rem] w-full px-[1.25rem] sm:px-[2.8125rem] pt-[2.5rem] sm:pt-[2.8125rem] flex flex-col items-start justify-between space-y-8">
                <div class=" w-full  flex flex-col items-start space-y-8">
                  <div class=" bg-[#28D9BB] w-[4.5rem] h-[4.5rem] rounded-full flex">
                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none" class=" m-auto">
@@ -82,7 +82,7 @@
                     <img src="/images/home/news.png" class=" object-cover w-full" alt="">
                 </div>
             </div>
-             <div v-animate  class=" bg-[#F9FAFB] dark:bg-[#1E2120] rounded-[2rem] w-full px-[1.25rem] sm:px-[2.8125rem] pt-[2.5rem] sm:pt-[2.8125rem] flex flex-col items-start justify-between space-y-8">
+             <div v-animateleft  class=" bg-[#F9FAFB] dark:bg-[#1E2120] rounded-[2rem] w-full px-[1.25rem] sm:px-[2.8125rem] pt-[2.5rem] sm:pt-[2.8125rem] flex flex-col items-start justify-between space-y-8">
                <div class=" w-full  flex flex-col items-start space-y-8">
                  <div class=" bg-[#28D9BB] w-[4.5rem] h-[4.5rem] rounded-full flex">
                   <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none" class=" m-auto">
