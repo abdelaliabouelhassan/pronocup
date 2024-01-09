@@ -7,10 +7,20 @@
 
         
 
-           <div class=" w-full  overflow-x-auto flex items-start space-x-10 xl:space-x-0  xl:grid xl:grid-cols-4 xl:gap-10">
+           <!-- <div class=" w-full  overflow-x-auto flex items-start space-x-10 xl:space-x-0  xl:grid xl:grid-cols-4 xl:gap-10">
                 <div v-for="(item,index,key) in Items" :key="key" :id="'card-' + index" @click="SelectLogo(index)" class="flex-shrink-0 w-[18.625rem]   xl:w-full h-[8.875rem] flex rounded-3xl cursor-pointer duration-200 dark:hover:bg-[#2A3A35] hover:bg-[#ECF7F2]" :class="{'dark:bg-[#2A3A35] bg-[#ECF7F2]':ItemIndex == index,'bg-[#F2F4F7] dark:bg-[#242726]':ItemIndex != index}">
                     <img :src="item.logo" class=" m-auto object-cover" alt="">
                 </div>
+            </div> -->
+
+            <div class=" w-full">
+                <Splide ref="splideRef" :options="options">
+                    <SplideSlide  v-for="(item,index,key) in Items" :key="key" class="w-[18.625rem] ">
+                    <div :id="'card-' + index" @click="SelectLogo(index)" class=" w-full h-[8.875rem] flex rounded-3xl cursor-pointer duration-200 dark:hover:bg-[#2A3A35] hover:bg-[#ECF7F2]" :class="{'dark:bg-[#2A3A35] bg-[#ECF7F2]':ItemIndex == index,'bg-[#F2F4F7] dark:bg-[#242726]':ItemIndex != index}">
+                                    <img :src="item.logo" class=" m-auto object-cover" alt="">
+                    </div>
+                    </SplideSlide>
+                </Splide>
             </div>
 
             <div id="bigcard" class=" w-full bg-[#F2F4F7] dark:bg-[#242726] rounded-[2rem] px-[3rem]  py-[3rem] lg:py-[5rem] lg:px-[7rem]">
@@ -47,6 +57,21 @@
 
 <script setup>
     import { onMounted, ref } from "vue";
+    import { Splide, SplideSlide } from '@splidejs/vue-splide';
+    import '@splidejs/vue-splide/css';
+    import '@splidejs/vue-splide/css/skyblue';
+    import '@splidejs/vue-splide/css/sea-green';
+    import '@splidejs/vue-splide/css/core';
+    
+    const splideRef = ref(null)
+    const  options = {
+                rewind:true,
+                arrows:false,
+                autoWidth:true,
+                pagination:false,
+                gap:40
+              
+            }
 
     const Items = ref([
         {
@@ -100,24 +125,21 @@
 
       const Prev = () => {
       
+       splideRef.value.go('-1')
         if(ItemIndex.value > 0){
             ItemIndex.value--
-            scrollToCard('controle')
-             setTimeout(() => {
-                scrollToCard('card-' + ItemIndex.value)
-            },25)
-            
-        }
+        }else(
+            ItemIndex.value = ItemLength.value - 1
+        )
     }
 
     const Next = () => {
+        splideRef.value.go('+1')
         if(ItemIndex.value < ItemLength.value - 1){
             ItemIndex.value++
-             scrollToCard('controle')
-            setTimeout(() => {
-                scrollToCard('card-' + ItemIndex.value)
-            },25)
-           
+                  
+        }else{
+            ItemIndex.value = 0
         }
     }
 
@@ -136,9 +158,12 @@
 
 
 <style scoped>
-::-webkit-scrollbar {
-  width: 0px; /* Set the width of the scrollbar */
-}
+/* ::-webkit-scrollbar {
+  width: 0px; 
+} */
 
+.splide {
+ padding: 0 !important;
+}
 
 </style>
