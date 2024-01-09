@@ -1,7 +1,7 @@
 <template>
-    <section class=" w-full flex flex-col px-4 xl:px-0 items-center max-w-[1280px] mx-auto space-y-6 py-28">
+    <section id="clients" class=" w-full flex flex-col px-4 xl:px-0 items-center max-w-[1280px] mx-auto space-y-6 py-28">
             <div class=" flex flex-col items-center space-y-4">
-                    <h1 class=" text-primary dark:text-white text-[4rem] font-helvetica font-medium">XXX+ clients satisfaits</h1>
+                    <h1 class=" text-primary dark:text-white text-[2.375rem] text-center md:text-[4rem] font-helvetica font-medium">XXX+ clients satisfaits</h1>
                     <span class=" text-2xl font-normal font-helvetica text-[#98A2B3] dark:text-[#9E9E9E]">Pourquoi pas vous ?</span>
             </div>
 

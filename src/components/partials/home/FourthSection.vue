@@ -7,7 +7,7 @@
                     Téléchargez notre app mobile et jouez où vous voulez, quand vous voulez !
                 </span>
 
-                <div class=" flex max-w-[686px] w-full sm:flex-row flex-col items-center space-y-4 sm:space-x-8 pt-4">
+                <div class=" flex max-w-[686px] w-full sm:flex-row flex-col items-center sm:space-y-0 space-y-4 sm:space-x-8 pt-4">
                       <button class=" w-full max-w-[19.72rem] rounded-[2.58631rem] dark:bg-[#1E2120] bg-white space-x-2 hover:scale-110 duration-200 h-[3.70rem] flex items-center justify-center dark:border-2 border-[#98A2B3] ">
                         <img src="/images/apple.png" class=" dark:hidden" alt="">
                         <img src="/images/home/applewhite.png" class=" dark:block hidden" alt="">
@@ -26,7 +26,9 @@
             </div>
         </div>
 
-        <ContactUs />
+        <div class=" w-full" id="contact" >
+            <ContactUs  />
+        </div>
     </section>
 </template>
 

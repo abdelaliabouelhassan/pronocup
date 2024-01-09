@@ -7,11 +7,11 @@
             </a>
 
             <div class=" flex items-center space-x-5 lg:space-x-5 xl:space-x-10 whitespace-nowrap">
-                <a href="" class=" text-primary dark:text-white font-helvetica font-bold text-base hidden lg:block">Le concept</a>
-                <a href="" class=" text-primary dark:text-white  font-helvetica font-bold text-base hidden lg:block">La prochaine compétition</a>
-                <a href="" class=" text-primary dark:text-white  font-helvetica font-bold text-base hidden lg:block">Nos clients</a>
-                <a href="" class=" text-primary dark:text-white  font-helvetica font-bold text-base hidden lg:block">FAQ</a>
-                <a href="" class=" text-primary dark:text-white  font-helvetica font-bold text-base hidden lg:block">Contact</a>
+                <a @click="scrollToSection('concept')" href="javascript:void(0)" class=" text-primary dark:text-white font-helvetica font-bold text-base hidden lg:block">Le concept</a>
+                <a @click="scrollToSection('prochaine')" href="javascript:void(0)" class=" text-primary dark:text-white  font-helvetica font-bold text-base hidden lg:block">La prochaine compétition</a>
+                <a @click="scrollToSection('clients')" href="javascript:void(0)" class=" text-primary dark:text-white  font-helvetica font-bold text-base hidden lg:block">Nos clients</a>
+                <a @click="scrollToSection('faq')" href="javascript:void(0)" class=" text-primary dark:text-white  font-helvetica font-bold text-base hidden lg:block">FAQ</a>
+                <a @click="scrollToSection('contact')" href="javascript:void(0)" class=" text-primary dark:text-white  font-helvetica font-bold text-base hidden lg:block">Contact</a>
                 <div class=" hidden sm:block">
                     <button class=" flex items-center space-x-3 bg-primary dark:bg-white rounded-[2rem] border-2 border-[#242726] text-white dark:text-primary text-base font-bold h-[3rem] px-4 hover:scale-110 duration-200 font-helvetica ">
                         <span>Aller vers l’app web</span>
@@ -58,30 +58,30 @@
                 <div class=" w-full flex">
                      <ul class="space-y-8 text-center font-medium py-8 m-auto">
                     <li>
-                     <nuxt-link to="/" class=" text-primary dark:text-white font-helvetica font-bold text-base ">
+                     <a href="javascript:void(0)" @click="scrollToSection('concept')"  class=" text-primary dark:text-white font-helvetica font-bold text-base ">
                             Le concept
-                     </nuxt-link>
+                     </a>
                     </li>
                     <li>
-                    <nuxt-link to="/" class=" text-primary dark:text-white font-helvetica font-bold text-base ">
+                    <a @click="scrollToSection('prochaine')" href="javascript:void(0)"  class=" text-primary dark:text-white font-helvetica font-bold text-base ">
                            La prochaine compétition
-                     </nuxt-link>
+                     </a>
 
                     </li>
                     <li>
-                    <nuxt-link to="/" class=" text-primary dark:text-white font-helvetica font-bold text-base ">
+                    <a @click="scrollToSection('clients')" href="javascript:void(0)"  class=" text-primary dark:text-white font-helvetica font-bold text-base ">
                             Nos clients
-                     </nuxt-link>
+                     </a>
 
                     </li>
                      <li>
-                    <nuxt-link to="/" class=" text-primary dark:text-white font-helvetica font-bold text-base ">
+                    <a @click="scrollToSection('faq')" href="javascript:void(0)"  class=" text-primary dark:text-white font-helvetica font-bold text-base ">
                             FAQ
-                     </nuxt-link>
+                     </a>
 
                     </li>
                      <li>
-                    <nuxt-link to="/" class=" text-primary dark:text-white font-helvetica font-bold text-base ">
+                    <nuxt-link @click="scrollToSection('contact')" href="javascript:void(0)"  class=" text-primary dark:text-white font-helvetica font-bold text-base ">
                             Contact
                      </nuxt-link>
 
@@ -118,6 +118,16 @@
     const toggleDarkMode = () => {
         toggleDark();
         document.body.classList.toggle('dark');
+    }
+
+    const scrollToSection = (id) => {
+        var elementToScrollTo = document.getElementById(id);
+        // Check if the element exists
+        if (elementToScrollTo) {
+            // Scroll the element into view
+            elementToScrollTo.scrollIntoView({ behavior: "smooth", block: "start" });
+            toggleMenu()
+        }
     }
 
     onMounted(() => {

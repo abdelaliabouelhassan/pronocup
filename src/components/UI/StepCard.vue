@@ -1,5 +1,5 @@
 <template>
-    <div class=" w-full flex flex-col items-end space-y-10 lg:space-y-6" v-if="ItemLength > 0">
+    <div class=" w-full flex flex-col items-center md:items-end space-y-10 lg:space-y-6" v-if="ItemLength > 0">
         <h1 class=" text-primary font-helvetica text-center text-[2.375rem] md:text-[4rem] font-medium dark:text-white">La prochaine compétition</h1>
         <div class=" w-full  flex-col items-center lg:items-end bg-[#F2F4F7] dark:bg-[#242726] relative rounded-[2rem] flex justify-end py-14 px-6">
             <div class=" lg:absolute -mt-24 lg:mt-auto left-0 top-0 h-lg:-left-16 h-lg:-top-28 max-w-[21.375rem] max-h-[16.625rem] h-lg:max-w-[36.125rem] h-lg:max-h-[28.0625rem]">

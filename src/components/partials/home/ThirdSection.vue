@@ -1,5 +1,5 @@
 <template>
-    <section class=" w-full duration-200 flex flex-col items-center space-y-10 max-w-[1280px] mx-auto py-10 px-4 xl:px-0">
+    <section id="faq" class=" w-full duration-200 flex flex-col items-center space-y-10 max-w-[1280px] mx-auto py-10 px-4 xl:px-0">
         <h1 class=" text-primary dark:text-white font-helvetica text-[4rem] font-medium">FAQ</h1>
        <div class=" w-full flex flex-col items-start space-y-10">
         <SpanCard v-for=" n in 3" :key="n"

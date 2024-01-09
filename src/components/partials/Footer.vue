@@ -38,18 +38,18 @@
                     </div>
                     <span class=" text-[#98A2B3] font-helvetica font-normal text-base text-opacity-60">L’application ultime de pronostics</span>
                 </div>
-                <div class=" flex flex-row items-center space-x-4 md:flex-col md:items-start md:space-y-4">
+                <div class=" flex flex-row items-center space-x-4 md:space-x-0 md:flex-col md:items-start md:space-y-4">
                     <span class=" text-white font-helvetica text-base font-normal">Pronocup</span>
                     <a href="#" class=" text-opacity-60 text-base font-helvetica font-normal text-[#98A2B3] hover:text-opacity-100 duration-200">lorem</a>
                      <a href="#" class=" text-opacity-60 text-base font-helvetica font-normal text-[#98A2B3] hover:text-opacity-100 duration-200">lorem</a>
                       <a href="#" class=" text-opacity-60 text-base font-helvetica font-normal text-[#98A2B3] hover:text-opacity-100 duration-200">lorem</a>
                 </div>
-                 <div class=" flex flex-row items-center space-x-4 md:flex-col md:items-start md:space-y-4">
+                 <div class=" flex flex-row items-center space-x-4 md:space-x-0 md:flex-col md:items-start md:space-y-4">
                     <span class=" text-white font-helvetica text-base font-normal">L’app</span>
                     <a href="#" class=" text-opacity-60 text-base font-helvetica font-normal text-[#98A2B3] hover:text-opacity-100 duration-200">Mobile</a>
                      <a href="#" class=" text-opacity-60 text-base font-helvetica font-normal text-[#98A2B3] hover:text-opacity-100 duration-200">Web</a>
                 </div>
-                 <div class=" flex flex-row items-center space-x-4 md:flex-col md:items-start md:space-y-4">
+                 <div class=" flex flex-row items-center space-x-4 md:space-x-0 md:flex-col md:items-start md:space-y-4">
                     <span class=" text-white font-helvetica text-base font-normal">L’entreprise</span>
                     <a href="#" class=" text-opacity-60 text-base font-helvetica font-normal text-[#98A2B3] hover:text-opacity-100 duration-200">À propos</a>
                      <a href="#" class=" text-opacity-60 text-base font-helvetica font-normal text-[#98A2B3] hover:text-opacity-100 duration-200">lorem</a>
