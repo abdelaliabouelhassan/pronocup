@@ -7,13 +7,13 @@
 
         
 
-           <!-- <div class=" w-full  overflow-x-auto flex items-start space-x-10 xl:space-x-0  xl:grid xl:grid-cols-4 xl:gap-10">
+           <div class=" w-full   overflow-x-auto flex items-start space-x-10 xl:space-x-0 hidden   xl:grid xl:grid-cols-4 xl:gap-10">
                 <div v-for="(item,index,key) in Items" :key="key" :id="'card-' + index" @click="SelectLogo(index)" class="flex-shrink-0 w-[18.625rem]   xl:w-full h-[8.875rem] flex rounded-3xl cursor-pointer duration-200 dark:hover:bg-[#2A3A35] hover:bg-[#ECF7F2]" :class="{'dark:bg-[#2A3A35] bg-[#ECF7F2]':ItemIndex == index,'bg-[#F2F4F7] dark:bg-[#242726]':ItemIndex != index}">
                     <img :src="item.logo" class=" m-auto object-cover" alt="">
                 </div>
-            </div> -->
+            </div>
 
-            <div class=" w-full">
+            <div class=" w-full xl:hidden">
                 <Splide ref="splideRef" :options="options">
                     <SplideSlide  v-for="(item,index,key) in Items" :key="key" class="w-[18.625rem] ">
                     <div :id="'card-' + index" @click="SelectLogo(index)" class=" w-full h-[8.875rem] flex rounded-3xl cursor-pointer duration-200 dark:hover:bg-[#2A3A35] hover:bg-[#ECF7F2]" :class="{'dark:bg-[#2A3A35] bg-[#ECF7F2]':ItemIndex == index,'bg-[#F2F4F7] dark:bg-[#242726]':ItemIndex != index}">
