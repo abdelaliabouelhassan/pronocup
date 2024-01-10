@@ -7,11 +7,11 @@
             </a>
 
             <div class=" flex items-center space-x-5 lg:space-x-5 xl:space-x-10 whitespace-nowrap">
-                <a @click="scrollToSection('concept')" href="javascript:void(0)" class=" text-primary dark:text-white font-helvetica font-bold text-base hidden lg:block">Le concept</a>
-                <a @click="scrollToSection('prochaine')" href="javascript:void(0)" class=" text-primary dark:text-white  font-helvetica font-bold text-base hidden lg:block">La prochaine compétition</a>
-                <a @click="scrollToSection('clients')" href="javascript:void(0)" class=" text-primary dark:text-white  font-helvetica font-bold text-base hidden lg:block">Nos clients</a>
-                <a @click="scrollToSection('faq')" href="javascript:void(0)" class=" text-primary dark:text-white  font-helvetica font-bold text-base hidden lg:block">FAQ</a>
-                <a @click="scrollToSection('contact')" href="javascript:void(0)" class=" text-primary dark:text-white  font-helvetica font-bold text-base hidden lg:block">Contact</a>
+                <a @click.prevent="scrollToSection('concept')" href="javascript:void(0)" class=" text-primary dark:text-white font-helvetica font-bold text-base hidden lg:block">Le concept</a>
+                <a @click.prevent="scrollToSection('prochaine')" href="javascript:void(0)" class=" text-primary dark:text-white  font-helvetica font-bold text-base hidden lg:block">La prochaine compétition</a>
+                <a @click.prevent="scrollToSection('clients')" href="javascript:void(0)" class=" text-primary dark:text-white  font-helvetica font-bold text-base hidden lg:block">Nos clients</a>
+                <a @click.prevent="scrollToSection('faq')" href="javascript:void(0)" class=" text-primary dark:text-white  font-helvetica font-bold text-base hidden lg:block">FAQ</a>
+                <a @click.prevent="scrollToSection('contact')" href="javascript:void(0)" class=" text-primary dark:text-white  font-helvetica font-bold text-base hidden lg:block">Contact</a>
                 <div class=" hidden sm:block">
                     <button class=" flex items-center space-x-3 bg-primary dark:bg-white rounded-[2rem] border-2 border-[#242726] text-white dark:text-primary text-base font-bold h-[3rem] px-4 hover:scale-110 duration-200 font-helvetica ">
                         <span>Aller vers l’app web</span>
@@ -122,11 +122,13 @@
 
     const scrollToSection = (id) => {
         var elementToScrollTo = document.getElementById(id);
+        show.value = false
+        document.body.classList.remove('overflow-hidden');
         // Check if the element exists
         if (elementToScrollTo) {
             // Scroll the element into view
             elementToScrollTo.scrollIntoView({ behavior: "smooth", block: "start" });
-            toggleMenu()
+             
         }
     }
 
