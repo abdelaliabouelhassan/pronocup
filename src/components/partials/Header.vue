@@ -1,5 +1,5 @@
 <template>
-    <header class=" w-full py-4 px-4 lg:px-2 xl:px-0 h-[120px] flex border-[#F2F3F6] dark:border-gray-500 lg:border-b-0" :class="{'border-b-2':show}">
+    <header class=" w-full fixed top-0 z-50 py-2 px-4 lg:px-2 xl:px-0 h-[120px] dark:bg-primary bg-white flex border-[#F2F3F6] dark:border-gray-500 lg:border-b-0" :class="{'border-b-2':show}">
         <div class=" w-full max-w-[1269px] mx-auto flex m-auto items-center justify-between">
             <a href="/">
                 <img src="/images/logo_black.png" class="  dark:hidden  " alt="">

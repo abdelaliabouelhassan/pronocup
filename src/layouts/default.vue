@@ -1,7 +1,7 @@
 <template>
     <div class=" w-full bg-white overflow-hidden dark:bg-primary">
         <Header />
-        <div class=" w-full">
+        <div class=" w-full pt-20">
             <slot />
         </div>
         <Footer />
