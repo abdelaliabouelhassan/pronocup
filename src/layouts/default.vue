@@ -1,5 +1,5 @@
 <template>
-    <div class=" w-full bg-white dark:bg-primary">
+    <div class=" w-full bg-white overflow-hidden dark:bg-primary">
         <Header />
         <div class=" w-full">
             <slot />

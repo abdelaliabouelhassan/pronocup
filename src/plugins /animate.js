@@ -11,8 +11,8 @@ const animate = {
           entry.target.style.transform = 'translateY(0)';
         } else {
           // Reset the animation properties when the element is not intersecting
-          entry.target.style.opacity = 0;
-          entry.target.style.transform = 'translateY(24px)';
+          // entry.target.style.opacity = 0;
+          // entry.target.style.transform = 'translateY(24px)';
         }
       });
     };

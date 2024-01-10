@@ -11,13 +11,13 @@ const animateleft = {
           entry.target.style.transform = 'translateX(0)';
         } else {
           // Reset the animation properties when the element is not intersecting
-          entry.target.style.opacity = 0;
-          entry.target.style.transform = 'translateX(24px)';
+          // entry.target.style.opacity = 0;
+          // entry.target.style.transform = 'translateX(24px)';
         }
       });
     };
 
-    const observer = new IntersectionObserver(animateElement, { threshold: 0.4 });
+    const observer = new IntersectionObserver(animateElement, { threshold: 0.1 });
 
     observer.observe(el);
 
